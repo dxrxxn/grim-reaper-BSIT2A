@@ -113,7 +113,7 @@ $(document).on('click', '.deleteUserBtn', function () {
 });
 
 $(document).ready(function () {
-    const $table = $('#example1');
+    const $table = $('#id');
 
     const csrfName = 'csrf_test_name'; 
     const csrfToken = $('input[name="' + csrfName + '"]').val();
@@ -122,7 +122,7 @@ $(document).ready(function () {
         processing: true,
         serverSide: true,
         ajax: {
-            url: baseUrl + 'users/fetchRecords',
+            url: baseUrl + 'person/fetchRecords',
             type: 'POST',
             headers: {
                 'X-CSRF-TOKEN': csrfToken
@@ -132,11 +132,8 @@ $(document).ready(function () {
         { data: 'row_number' },
         { data: 'id', visible: false },
         { data: 'name' },
-        { data: 'email' },
-        { data: 'role' },
-        { data: 'status' },
-        { data: 'phone' },
-        { data: 'created_at' },
+        { data: 'bday' },
+        
         {
             data: null,
             orderable: false,
