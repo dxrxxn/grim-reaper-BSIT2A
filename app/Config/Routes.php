@@ -13,14 +13,23 @@ $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/logout', 'Auth::logout');
 
 // User Acounts routes
+$routes->get('/users', 'Users::index');
+$routes->post('users/save', 'Users::save');
+$routes->get('users/edit/(:segment)', 'Users::edit/$1');
+$routes->post('users/update', 'Users::update');
+$routes->delete('users/delete/(:num)', 'Users::delete/$1');
+$routes->post('users/fetchRecords', 'Users::fetchRecords');
 
-
+// Person routes
 $routes->get('/person', 'Person::index');
 $routes->post('person/save', 'Person::save');
 $routes->get('person/edit/(:segment)', 'Person::edit/$1');
 $routes->post('person/update', 'Person::update');
 $routes->delete('person/delete/(:num)', 'Person::delete/$1');
 $routes->post('person/fetchRecords', 'Person::fetchRecords');
+
+$routes->get('/person', 'Person::index');
+$routes->post('/person/store', 'Person::store');
 
 
 // Logs routes for admin

@@ -98,7 +98,12 @@ body.dark-mode .main-sidebar .nav-link:hover {
         <i class="nav-icon fas fa-user-lock"></i>
         <p>User Accounts</p>
       </a>
-    </li>
+     </li>
+    <li class="nav-item">
+      <a href="<?= base_url('person') ?>" class="nav-link <?= is_active(1, 'person') ?>">
+        <i class="nav-icon fas fa-users"></i>
+        <p>person</p>
+      </a>
   </ul>
 </nav>
 </div>
